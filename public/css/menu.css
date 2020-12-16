@@ -1,0 +1,49 @@
+body {
+    background-image: url("../assets/cyber-cars.jpg");
+    color: white;
+}
+
+.title-text {
+    text-align: center;
+    align-items: center;
+}
+
+.menu {
+    text-align: center;
+}
+
+.row-1 {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+.row-1 > a {
+    flex: 1 0 0%;
+    color: white;
+    font-size: 24px;
+}
+
+.row-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+.row-2 > a {
+    flex: 1 0 0%;
+    color: white;
+    font-size: 24px;
+}
+
+.row-1 > a > img {
+    width: 250px;
+    height: 250px;
+}
+
+.row-2 > a > img {
+    width: 250px;
+    height: 250px;
+}
+
+img.menu-border {
+    border: 4px solid white;
+}
