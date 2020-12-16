@@ -17,10 +17,18 @@ body {
     align-items: center;
     margin-top: 5%;
 }
-.row-1 > a {
+.row-1 > div {
     flex: 1 0 0%;
+}
+
+.row-1 > div > a {
     color: white;
     font-size: 24px;
+}
+
+.row-1 > div > a > img {
+    width: 250px;
+    height: 250px;
 }
 
 .row-2 {
@@ -28,18 +36,16 @@ body {
     align-items: center;
     margin-top: 5%;
 }
-.row-2 > a {
+.row-2 > div {
     flex: 1 0 0%;
+}
+
+.row-2 > div > a {
     color: white;
     font-size: 24px;
 }
 
-.row-1 > a > img {
-    width: 250px;
-    height: 250px;
-}
-
-.row-2 > a > img {
+.row-2 > div > a > img {
     width: 250px;
     height: 250px;
 }
