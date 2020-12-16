@@ -2,3 +2,7 @@ body {
     background-image: url("../assets/cyber-cars.jpg");
     color: white;
 }
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+}
