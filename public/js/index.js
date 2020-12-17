@@ -1,3 +1,3 @@
-document.body.addEventListener("click", function() {
+document.addEventListener("click", function() {
     window.location.href = "./intro.html";
 })
