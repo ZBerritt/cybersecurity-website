@@ -1,0 +1,46 @@
+
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#stage {
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+}
+
+.side-bar {
+    position: fixed;
+    display: block;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+}
+
+.side-bar > span {
+    margin-left: 5%;
+}
+
+.side-bar > p {
+    font-size: 28px;
+    margin-left: 5%;
+}
+
+.side-bar > hr {
+    color: white;
+    width: 90%;
+}
+
+p.hint {
+    font-size: 14px;
+}
