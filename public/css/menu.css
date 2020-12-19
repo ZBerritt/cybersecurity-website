@@ -53,3 +53,12 @@ body {
 img.menu-border {
     border: 4px solid white;
 }
+
+.finish-btn {
+    position: fixed;
+    display: block;
+    right: 7px;
+    bottom: 7px;
+    height: 14%;
+    width: auto;
+}
