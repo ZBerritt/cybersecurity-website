@@ -1,5 +1,5 @@
 body {
     background-image: url("../assets/EndImage.jpg");
     color: white;
-    background-size: cover;
+    background-size: contain;
 }
