@@ -1,5 +1,7 @@
 body {
     background-image: url("../assets/EndImage.jpg");
-    background-size: cover;
     color: black;
 }
+.your-class {
+        height: 100vh;
+    }
