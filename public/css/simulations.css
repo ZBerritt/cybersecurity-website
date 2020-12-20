@@ -62,6 +62,10 @@ p.hint {
     color: transparent;
 }
 
+.trigger:focus {
+    outline: none;
+}
+
 .trigger-test { /* Used for testing trigger positions */
     position: fixed;
     display: block;
