@@ -76,6 +76,37 @@ p.hint {
     display: block;
 }
 
+#home-btn {
+    position: fixed;
+    display: block;
+    top: 1%;
+    left: 1%;
+    height: 10%;
+    width: auto;
+    z-index: 1;
+}
+
+#help-btn {
+    position: fixed;
+    display: block;
+    top: 1%;
+    left: 7%;
+    height: 10%;
+    width: auto;
+    z-index: 1;
+}
+
+#go-btn {
+    position: fixed;
+    display: block;
+    bottom: 1%;
+    right: 1%;
+    height: 15%;
+    width: auto;
+    z-index: 2;
+}
+
+
 /* Deny only */
 .insert-password {
     position: fixed;

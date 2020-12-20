@@ -13,6 +13,8 @@
     <body>
         <div class="stage">
             <img id="stage-image" src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+            <img onclick="window.location.href = '../'" id="home-btn" src="../public/assets/Home.png">
+            <img id="help-btn" src="../public/assets/Help.png">
             <img id="notepad" src="../public/assets/Notepad.png">
             <button onclick="lightOneTrigger()" class="trigger" style="width: 10%; height: 12%; top: 25%; left: 55%;"></button>
             <button onclick="lightTwoTrigger()" class="trigger" style="width: 10%; height: 12%; top: 15%; left: 20%;"></button>
@@ -69,6 +71,9 @@
                 <br><br>
                 <b>This activity is complete!</b>
             </p>
+            <a id="go-btn" href="../menu.html">
+                <img height="100%" width="100%" src="../public/assets/go_button.png">
+            </a>
         </div>
         <script src="../public/js/deny.js"></script>
     </body>
