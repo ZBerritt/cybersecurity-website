@@ -1,7 +1,18 @@
+body, html {
+    height: 100%;
+}
+
 body {
-    background-image: url("../assets/EndImage.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; 
+    background-color: white;
     color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    pointer-events: none
 }
