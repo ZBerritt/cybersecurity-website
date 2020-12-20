@@ -55,8 +55,9 @@ body {
     width: 90%;
 }
 
-p.hint {
-    font-size: 14px;
+p#hint {
+    display: none;
+    font-size: 24px;
 }
 
 .trigger {
@@ -137,4 +138,31 @@ p.hint {
     height: auto;
     width: 5%;
     z-index: 100;
+}
+
+#notepad-full {
+    position: fixed;
+    display: none;
+    width: 30%;
+    height: auto;
+    top: 30%;
+    left: 20%;
+}
+
+img.exit-notebook {
+    position: fixed;
+    display: block;
+    width: 1.5%;
+    height: auto;
+    top: 31%;
+    left: 48%;
+}
+
+#crash {
+    position: fixed;
+    display: none;
+    top: 40%;
+    left: 20%;
+    height: 30%;
+    width: 38%;
 }

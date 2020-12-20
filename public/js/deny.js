@@ -1,23 +1,39 @@
 var stageImage = document.getElementById("stage-image");
 var passOne = document.getElementById("password-1");
 var passTwo = document.getElementById("password-2");
+var notepad = document.getElementById("notepad-full");
 var passwordOpen = false;
 var foundPassword1 = false;
 var foundPassword2 = false;
 var hacked = false;
+var notepadOpen = false;
 
 function lightOneTrigger() {
-    if (passwordOpen || foundPassword1) return;
+    if (passwordOpen || foundPassword1 || notepadOpen) return;
     stageImage.className = "dark";
     passOne.style.display = "block"
     passwordOpen = true;
 }
 
 function lightTwoTrigger() {
-    if (passwordOpen || foundPassword2) return;
+    if (passwordOpen || foundPassword2 || notepadOpen) return;
     stageImage.className = "dark";
     passTwo.style.display = "block"
     passwordOpen = true;
+}
+
+function openNotepad() {
+    if (notepadOpen || passwordOpen) return;
+    stageImage.className = "dark";
+    notepad.style.display = "block"
+    notepadOpen = true;
+}
+
+function closeNotepad() {
+    if (!notepadOpen) return;
+    stageImage.className = "";
+    notepad.style.display = "none";
+    notepadOpen = false;
 }
 
 function exitPassword() {
@@ -59,6 +75,7 @@ function enterTwo() {
 function hackLight() {
     if (hacked) return;
     if (foundPassword1 && foundPassword2) {
+        document.getElementById("crash").style.display = "block";
         document.getElementById("deny-success").style.display = "block";
         hacked = true;
     } else {
