@@ -17,3 +17,7 @@ body {
     z-index: -1;
     pointer-events: none
 }
+div {
+  display: flex;
+  align-items: center;
+}
