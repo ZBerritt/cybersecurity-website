@@ -16,7 +16,7 @@ body {
     z-index: 1;
 }
 
-.stage > img {
+.stage > img#stage-image {
     pointer-events: none;
 }
 
@@ -92,4 +92,18 @@ p.hint {
     align-items: center;
     text-align: center;
     color: white;
+}
+
+.insert-password > div > div > p {
+    font-size: 42px;
+}
+
+#notepad {
+    position: fixed;
+    display: block;
+    bottom: 1%;
+    left: 1%;
+    height: auto;
+    width: 5%;
+    z-index: 100;
 }

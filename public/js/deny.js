@@ -30,15 +30,29 @@ function exitPassword() {
 
 function enterOne() {
     var passText = document.getElementById("input-1").value;
-    if (passText === "1234") {
+    if (passText.toLowerCase() === "cpu") {
         foundPassword1 = true;
+        document.getElementById("input1-success").style.display = "block";
+        setTimeout(exitPassword, 3000);
+    } else {
+        document.getElementById("input1-error").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("input1-error").style.display = "none";
+        }, 3000);
     }
 }
 
 function enterTwo() {
     var passText = document.getElementById("input-2").value;
-    if (passText === "1234") {
-        foundPassword2 = true;  
+    if (passText.toLowerCase() === "123456") {
+        foundPassword2 = true;
+        document.getElementById("input2-success").style.display = "block";
+        setTimeout(exitPassword, 3000);
+    } else {
+        document.getElementById("input2-error").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("input2-error").style.display = "none";
+        }, 3000);
     }
 }
 
