@@ -8,11 +8,20 @@ body {
     padding: 0;
 }
 
-#stage {
-    width: 75%;
+.stage {
+    width: 75.1%;
     height: 100%;
-    background-color: white;
     position: fixed;
+    display: block;
+    z-index: 1;
+}
+
+.stage > img {
+    pointer-events: none;
+}
+
+.dark {
+    filter: brightness(30%); 
 }
 
 .side-bar {
@@ -43,4 +52,35 @@ body {
 
 p.hint {
     font-size: 14px;
+}
+
+.trigger {
+    position: fixed;
+    display: block;
+    background: transparent;
+    border: none;
+    color: transparent;
+}
+
+.trigger-test { /* Used for testing trigger positions */
+    position: fixed;
+    display: block;
+}
+
+/* Deny only */
+.insert-password {
+    position: fixed;
+    display: none;
+    width: 30%;
+    height: 30%;
+    top: 35%;
+    left: 20%;
+    background-color: black;
+}
+
+.insert-password > div {
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: white;
 }

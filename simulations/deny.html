@@ -11,8 +11,31 @@
     </head>
 
     <body>
-        <div id="stage">
-            <img src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+        <div class="stage">
+            <img id="stage-image" src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+            <button onclick="lightOneTrigger()" class="trigger" style="width: 10%; height: 12%; top: 25%; left: 55%;"></button>
+            <button onclick="lightTwoTrigger()" class="trigger" style="width: 10%; height: 12%; top: 15%; left: 20%;"></button>
+            <div id="password-1" class="insert-password">
+                <div style="text-align: right; width: 100%; height: 10%; background-color: gray;">
+                <a onclick="exitPassword()" href="#">X</a>
+                </div>
+                <div>
+                    <h1>Insert Password:</h1>
+                    <input type="password">
+                    <button id="enter-1">Enter</button>
+                </div>
+            </div>
+
+            <div id="password-2" class="insert-password">
+                <div style="text-align: right; width: 100%; height: 10%; background-color: gray;">
+                    <a onclick="exitPassword()" href="#">X</a>
+                </div>
+                <div>
+                    <h1>Insert Password:</h1>
+                    <input type="password">
+                    <button id="enter-2">Enter</button>
+                </div>
+            </div>
         </div>
         <div class="side-bar">
            <span style="font-size: 64px;">Deny</span>
@@ -21,14 +44,12 @@
             </p>
             <hr>
             <p>
-                Stop the traffic lights from working to see what happens.
+                Use your notebook to find the passwords to stop the traffic lights.
             </p>
             <p class="hint">
-                Click on a traffic light to start the game.
+                Hint: Click on a traffic light to enter password
             </p>
         </div>
-        <div>
-
-        </div>
+        <script src="../public/js/deny.js"></script>
     </body>
 </html>
