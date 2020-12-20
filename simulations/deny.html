@@ -20,9 +20,9 @@
                 <a onclick="exitPassword()" href="#">X</a>
                 </div>
                 <div>
-                    <h1>Insert Password:</h1>
-                    <input type="password">
-                    <button id="enter-1">Enter</button>
+                    <h1>Insert Password for Light 1:</h1>
+                    <input id="input-1" type="password">
+                    <button onclick="enterOne()" id="enter-1">Enter</button>
                 </div>
             </div>
 
@@ -31,9 +31,9 @@
                     <a onclick="exitPassword()" href="#">X</a>
                 </div>
                 <div>
-                    <h1>Insert Password:</h1>
-                    <input type="password">
-                    <button id="enter-2">Enter</button>
+                    <h1>Insert Password for Light 2:</h1>
+                    <input id="input-2" type="password">
+                    <button onclick="enterTwo()" id="enter-2">Enter</button>
                 </div>
             </div>
         </div>
@@ -49,6 +49,9 @@
             <p class="hint">
                 Hint: Click on a traffic light to enter password
             </p>
+            <button onclick="hackLight()">Deny!</button>
+            <p id="deny-error" style="display: none;">Error! Passwords have not been input!</p>
+            <p id="deny-success" style="display: none;">Success! The traffic light no longer works. Cars can no longer tell if the light should be green or red, which can lead to severe accidents.</p>
         </div>
         <script src="../public/js/deny.js"></script>
     </body>
