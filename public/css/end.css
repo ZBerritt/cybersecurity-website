@@ -1,19 +1,35 @@
-body, html {
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 
 body {
-    background-color: white;
-    color: white;
-    margin: 0;
-    padding: 0;
+  background-color: white;
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: fixed;
 }
 
 .background-image {
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    pointer-events: none
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.return-btn {
+  position: fixed;
+  display: block;
+  top: 78%;
+  left: 35%;
+}
+.thank-you {
+  font-size: 80px;
+  position: fixed;
+  display: block;
+  left: 30%;
+  top: 1%;
 }
