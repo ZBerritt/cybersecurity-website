@@ -49,6 +49,23 @@ body {
 .side-bar > p {
     font-size: 28px;
     margin-left: 5%;
+    pointer-events: none;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.side-bar > span {
+    pointer-events: none;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 
 .side-bar > hr {
@@ -194,4 +211,41 @@ img.exit-notebook {
     right: 17%;
     height: 30%;
     width: 38%;
+}
+
+/* Degrade only */
+
+#phone {
+    position: fixed;
+    display: block;
+    bottom: 1%;
+    right: 1%;
+    height: auto;
+    width: 5%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#phone-full {
+    position: fixed;
+    display: none;
+    width: 20%;
+    height: auto;
+    top: 20%;
+    right: 30%;
+    pointer-events: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.screen {
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 7%;
+    font-size: 15px;
+    word-break: break-all;
+    pointer-events: all;
 }
