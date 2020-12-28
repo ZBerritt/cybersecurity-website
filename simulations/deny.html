@@ -15,17 +15,17 @@
             <img id="stage-image" src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
             <img id="crash" src="../public/assets/Accident.png">
             <img onclick="window.location.href = '../'" id="home-btn" src="../public/assets/Home.png">
-            <img id="help-btn" onclick="document.getElementById('hint').style.display = 'block';" src="../public/assets/Help.png">
+            <img id="hint-btn" onclick="document.getElementById('hint').style.display = 'block';" src="../public/assets/Hint.png">
             <img id="notepad" onclick="openNotepad()" src="../public/assets/Notepad.png">
-            <button onclick="lightOneTrigger()" class="trigger" style="width: 10%; height: 12%; top: 25%; left: 55%;"></button>
-            <button onclick="lightTwoTrigger()" class="trigger" style="width: 10%; height: 12%; top: 15%; left: 20%;"></button>
+            <button onclick="lightOneTrigger()" class="trigger" style="width: 10%; height: 12%; top: 25%; left: 80%;"></button>
+            <button onclick="lightTwoTrigger()" class="trigger" style="width: 10%; height: 12%; top: 15%; left: 45%;"></button>
             <div id="notepad-full">
                 <img class="exit-notebook" src="../public/assets/x.png" onclick="closeNotepad()">
                 <img src="../public/assets/Questions.png" height="100%" width="100%">
             </div>
             <div id="password-1" class="insert-password">
                 <div style="text-align: right; width: 100%; height: 10%; background-color: gray;">
-                    <img src="../public/assets/x.png" style="height: 80%; width: auto; margin-top: .5%; margin-right: .5%;" onclick="exitPassword()">
+                    <img src="../public/assets/x.png" style="height: 80%; width: auto; margin-top: .5%; margin-right: .5%; cursor: pointer;" onclick="exitPassword()">
                 </div>
                 <div>
                     <h1>Insert Password for Light 1:</h1>
@@ -42,7 +42,7 @@
 
             <div id="password-2" class="insert-password">
                 <div style="text-align: right; width: 100%; height: 10%; background-color: gray;">
-                    <img src="../public/assets/x.png" style="height: 80%; width: auto; margin-top: .5%; margin-right: .5%;" onclick="exitPassword()">
+                    <img src="../public/assets/x.png" style="height: 80%; width: auto; margin-top: .5%; margin-right: .5%; cursor: pointer;" onclick="exitPassword()">
                 </div>
                 <div>
                     <h1>Insert Password for Light 2:</h1>
@@ -66,7 +66,6 @@
             <p>
                 Use your notebook to find the passwords to stop the traffic lights. Click on a traffic light to enter the password.
             </p>
-            <button onclick="hackLight()">Deny!</button>
             <p id="hint">
                 Password hints:
                 <br><br>
@@ -74,6 +73,7 @@
                 <br>
                 Password 2: All numbers
             </p>
+            <button class="hack-btn" onclick="hackLight()">Hack Lights</button>
             <p id="deny-error" style="color: red; display: none;">Error! Passwords have not been input!</p>
             <p id="deny-success" style="color: green; display: none;">
                 Success! The traffic light no longer works. Cars can no longer tell if the light should be green or red, which can lead to severe accidents.

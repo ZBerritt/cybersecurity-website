@@ -9,8 +9,9 @@ body {
 }
 
 .stage {
-    width: 75.1%;
+    width: 75%;
     height: 100%;
+    right: 0;
     position: fixed;
     display: block;
     z-index: 1;
@@ -30,7 +31,7 @@ body {
     width: 25%;
     height: 100%;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
     background-color: black;
     color: white;
@@ -66,6 +67,7 @@ p#hint {
     background: transparent;
     border: none;
     color: transparent;
+    cursor: pointer;
 }
 
 .trigger:focus {
@@ -78,33 +80,56 @@ p#hint {
 }
 
 #home-btn {
-    position: fixed;
+    position: absolute;
     display: block;
     top: 1%;
-    left: 1%;
+    right: 1%;
     height: 10%;
     width: auto;
-    z-index: 1;
+    cursor: pointer;
 }
 
-#help-btn {
-    position: fixed;
+#hint-btn {
+    position: absolute;
     display: block;
     top: 1%;
-    left: 7%;
+    right: 9%;
     height: 10%;
     width: auto;
-    z-index: 1;
+    cursor: pointer;
 }
 
 #go-btn {
     position: fixed;
     display: block;
     bottom: 1%;
-    right: 1%;
+    left: 1%;
     height: 15%;
     width: auto;
     z-index: 2;
+    cursor: pointer;
+}
+
+#help-btn {
+    position: absolute;
+    display: block;
+    top: 1%;
+    right: 17%;
+    height: 10%;
+    width: auto;
+    cursor: pointer;
+}
+
+.hack-btn {
+    margin-left: 20% !important;
+    background-color: #3b80e7;
+    border-radius: 10px;
+    border: 3px solid #cccccc;
+    color: #ffffff;
+    text-align: center;
+    width: 50%;
+    padding: 4%;
+    cursor: pointer;
 }
 
 
@@ -115,7 +140,7 @@ p#hint {
     width: 30%;
     height: 30%;
     top: 35%;
-    left: 20%;
+    right: 20%;
     background-color: black;
 }
 
@@ -134,10 +159,11 @@ p#hint {
     position: fixed;
     display: block;
     bottom: 1%;
-    left: 1%;
+    right: 1%;
     height: auto;
     width: 5%;
     z-index: 100;
+    cursor: pointer;
 }
 
 #notepad-full {
@@ -146,23 +172,26 @@ p#hint {
     width: 30%;
     height: auto;
     top: 30%;
-    left: 20%;
+    right: 20%;
+    pointer-events: none;
 }
 
 img.exit-notebook {
-    position: fixed;
+    position: absolute;
     display: block;
-    width: 1.5%;
+    width: 6%;
     height: auto;
-    top: 31%;
-    left: 48%;
+    top: 2%;
+    left: 93%;
+    cursor: pointer;
+    pointer-events: all;
 }
 
 #crash {
     position: fixed;
-    display: none;
+    display: none; 
     top: 40%;
-    left: 20%;
+    right: 17%;
     height: 30%;
     width: 38%;
 }
