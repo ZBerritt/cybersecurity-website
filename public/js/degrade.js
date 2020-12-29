@@ -25,7 +25,7 @@ function sendData() {
     if (trafficLightHealth === 0) return;
     var text = inputData.value;
     console.log(text, text.length)
-    if (text.length < 20) {
+    if (text.length < 15) {
         error.style.display = "block";
         setTimeout(function() {
             error.style.display = "none";
