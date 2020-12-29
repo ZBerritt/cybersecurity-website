@@ -8,7 +8,7 @@ var idleTime = 0;
         idleTime = 0;
     });
 
-    let idleTimer = setInterval(function() {
+    setInterval(function() {
         idleTime++;
         if (idleTime >= 6) window.location.href = "./" // # of 30 second intervals before reload
     }, 30000)

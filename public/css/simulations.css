@@ -249,3 +249,48 @@ img.exit-notebook {
     word-break: break-all;
     pointer-events: all;
 }
+
+/* Disrupt only */
+#box-1 {
+    position: fixed;
+    display: none;
+    width: 30%;
+    height: auto;
+    top: 25%;
+    right: 23%;
+    pointer-events: none;
+}
+
+#box-2 {
+    position: fixed;
+    display: none;
+    width: 30%;
+    height: auto;
+    top: 25%;
+    right: 23%;
+    pointer-events: none;
+}
+
+.wire {
+    display: block;
+    pointer-events: all;
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+}
+
+.wire:focus {
+    outline: none;
+}
+
+.exit-box {
+    position: absolute;
+    display: block;
+    width: 6%;
+    height: auto;
+    top: 15%;
+    left: 93%;
+    cursor: pointer;
+    pointer-events: all;
+}
