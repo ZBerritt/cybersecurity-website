@@ -78,6 +78,11 @@ p#hint {
     font-size: 24px;
 }
 
+#hint {
+    display: none;
+    font-size: 24px;
+}
+
 .trigger {
     position: fixed;
     display: block;
@@ -294,3 +299,5 @@ img.exit-notebook {
     cursor: pointer;
     pointer-events: all;
 }
+
+/* Deceive only */

@@ -11,21 +11,91 @@
     </head>
 
     <body>
-        <div id="stage">
-            <img src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+        <div class="stage">
+            <img id="stage-image" src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+            <img onclick="window.location.href = '../'" id="home-btn" src="../public/assets/Home.png">
+            <img id="hint-btn" onclick="document.getElementById('hint').style.display = 'block';" src="../public/assets/Hint.png">
+            <img style="display: none;" id="phone" onclick="openPhone()" src="../public/assets/Phone.png">
+            <div id="password" class="insert-password">
+                <div style="text-align: right; width: 100%; height: 10%; background-color: gray;">
+                    <img src="../public/assets/x.png" style="height: 80%; width: auto; margin-top: .5%; margin-right: .5%; cursor: pointer;" onclick="exitPassword()">
+                </div>
+                <div>
+                    <span style="font-size: 160%;">Create a <b>strong</b> password for the traffic light</span>
+                    <br>
+                    <span style="font-size: 115%;">This password will not save anywhere after leaving the page!</span>
+                    <br><br>
+                    <div>
+                        <label for="pass-input">Password:</label>
+                        <input id="pass-input" type="password">
+                        <br>
+                        <label for="pass-confirm">Re-type Password:</label>
+                        <input id="pass-confirm" type="password">
+                        <br>
+                        <button onclick="testPassword()">Enter</button>
+                        <br>
+                    </div>
+                    <div>
+                        <p id="match-error" style="color: red; display: none;">Your passwords do not match.</p>
+                        <p id="input-error" style="color: red; display: none;">Your password is not strong enough!</p>
+                        <p id="input-success" style="color: green; display: none;">Success! Password has been applied.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="phone-full">
+                <img class="exit-notebook" src="../public/assets/x.png" onclick="closePhone()">
+                <div class="screen">
+                    Hacker Terminal [Version 1.0.7]
+                    <br>
+                    (c) 2020 Zach Berritt. 
+                    <br>
+                    No rights reserved.
+                    <br><br>
+                    hacker@my-phone:~$ sudo ssh admin@187.283.32.313 -p 5678
+                    <br><br>
+                    admin@187.283.32.313:5678's password: **************
+                    <br>
+                    Authentication successful!
+                    <br><br>
+                    admin@traffic-light:~$ color-change
+                    <br>
+                    <br>
+                    <span style="color: yellow;">What color will you change the lights to (select with mouse):</span>
+                    <br>
+                    <span onclick="greenChoice()" style="color: green; cursor: pointer;">Green</span>
+                    <br>
+                    <span onclick="redChoice()" style="color: red; cursor: pointer;">Red</span>
+                    <br><br>
+                    <span id="done-message" style="display: none;">Success! The lights have changed. Press the X to see the damage.</span>
+                </input>
+                </div>
+                <img src="../public/assets/PhoneBIG.png" height="100%" width="100%">
+            </div>
         </div>
         <div class="side-bar">
            <span style="font-size: 64px;">Deceive</span>
             <p>
-                Manipulating people in control of systems to do as the hacker wants.
+                Manipulating a system to trick the end user.
             </p>
             <hr>
             <p>
-                Deceive the drivers to see what happens.
+                Set a strong password for the traffic lights, then hack into them.
             </p>
-            <p class="hint">
-                Click on a traffic light to start the game.
-            </p>
+            <button class="hack-btn" onclick="start()">Start!</button>
+            <br><br>
+            <div style="font-size: 125%; margin-left: 5%;" id="hint">
+                <span>A strong password must be the following:</span>
+                <ol>
+                    <li>At least 10 characters long</li>
+                    <li>Contains upper and lower case letters</li>
+                    <li>Contains number(s)</li>
+                    <li>Contains special characters (!, ?, @, etc.)</li>
+                </ol>
+            </div>
+            <a id="go-btn" href="../menu.html">
+                <img height="100%" width="auto" src="../public/assets/go_button.png">
+            </a>
         </div>
+        <script src="../public/js/deceive.js"></script>
     </body>
 </html>
