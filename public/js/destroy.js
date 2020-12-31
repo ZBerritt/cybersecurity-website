@@ -2,7 +2,7 @@ var stageImage = document.getElementById("stage-image");
 var boxOne = document.getElementById("box-1");
 var boxTwo = document.getElementById("box-2");
 var hacking = false; // Is the user hacking
-var codes = ["1", "2"]
+var codes = ["secret", "code"] // Dont make this case sensitive you dumb idiot
 var complete = [false, false];
 
 function boxOneTrigger() {
