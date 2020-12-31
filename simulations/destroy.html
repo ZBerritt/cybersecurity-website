@@ -11,8 +11,13 @@
     </head>
 
     <body>
-        <div id="stage">
-            <img src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+        <div class="stage">
+            <img src="../public/assets/destroy/intersection with boxes.png" width="100%" height="100%">
+            <img onclick="window.location.href = '../'" id="home-btn" src="../public/assets/Home.png">
+            <img id="menu-btn" onclick="window.location.href = '../menu.html'" src="../public/assets/Menu.png">
+            <img id="hint-btn" onclick="document.getElementById('hint').style.display = 'block';" src="../public/assets/Hint.png">
+            <button onclick="boxOneTrigger()" class="trigger" style="width: 3.5%; height: 9%; top: 49%; left: 86%;"></button>
+            <button onclick="boxTwoTrigger()" class="trigger" style="width: 3.5%; height: 9%; top: 31%; left: 54.5%;"></button>
         </div>
         <div class="side-bar">
            <span style="font-size: 64px;">Destroy</span>
@@ -21,11 +26,12 @@
             </p>
             <hr>
             <p>
-                Destroy the traffic light to see what happens.
+                Hack into the traffic light power boxes to overload the electrical system.
             </p>
-            <p class="hint">
+            <p id="hint">
                 Click on a traffic light to start the game.
             </p>
+            <script src="../public/js/destroy.js"></script>
         </div>
     </body>
 </html>

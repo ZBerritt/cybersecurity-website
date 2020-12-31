@@ -115,32 +115,22 @@ p#hint {
     position: absolute;
     display: block;
     top: 1%;
+    right: 17%;
+    height: 10%;
+    width: auto;
+    cursor: pointer;
+}
+
+#menu-btn {
+    position: absolute;
+    display: block;
+    top: 1%;
     right: 9%;
     height: 10%;
     width: auto;
     cursor: pointer;
 }
 
-#go-btn {
-    position: fixed;
-    display: block;
-    bottom: 1%;
-    left: 1%;
-    height: 15%;
-    width: auto;
-    z-index: 2;
-    cursor: pointer;
-}
-
-#help-btn {
-    position: absolute;
-    display: block;
-    top: 1%;
-    right: 17%;
-    height: 10%;
-    width: auto;
-    cursor: pointer;
-}
 
 .hack-btn {
     margin-left: 20% !important;
@@ -301,3 +291,6 @@ img.exit-notebook {
 }
 
 /* Deceive only */
+
+
+/* Destroy only */
