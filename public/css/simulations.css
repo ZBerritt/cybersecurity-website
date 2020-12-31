@@ -294,3 +294,11 @@ img.exit-notebook {
 
 
 /* Destroy only */
+
+#box-2-closed {
+    display: block;
+}
+
+#box-2-open {
+    display: none;
+}

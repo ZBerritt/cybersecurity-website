@@ -18,3 +18,15 @@ function boxTwoTrigger() {
     boxOne.style.display = "block"
     hacking = true;
 }
+
+function closeBox() {
+    if (!hacking) return;
+    boxOne.style.display = "none";
+    boxTwo.style.display = "none";
+    stageImage.className = "";
+    hacking = false;
+}
+
+function inputCode(box) {
+    
+}
