@@ -11,8 +11,33 @@
     </head>
 
     <body>
-        <div id="stage">
-            <img src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+        <div class="stage">
+            <img id="stage-image" src="../public/assets/disrupt/Signal both.png" width="100%" height="100%">
+            <img onclick="window.location.href = '../'" id="home-btn" src="../public/assets/Home.png">
+            <img id="hint-btn" onclick="document.getElementById('hint').style.display = 'block';" src="../public/assets/Hint.png">
+            <img id="menu-btn" onclick="window.location.href = '../menu.html'" src="../public/assets/Menu.png">
+            <button onclick="boxOneTrigger()" class="trigger" style="width: 3.5%; height: 9%; top: 49%; left: 86%;"></button>
+            <button onclick="boxTwoTrigger()" class="trigger" style="width: 3.5%; height: 9%; top: 31%; left: 54.5%;"></button>
+            <div id="box-1">
+                <div style="width: 100%; height: 9.5%; position: absolute; text-align: center; color: white;">
+                    <img class="exit-box" src="../public/assets/x.png" onclick="closeBox()">
+                    <span id="feedback-1" style="font-size: 200%">Click on a wire to cut it</span>
+                </div>
+                <button class="wire" style="height: 85%; width: 15%; position: absolute; left: 13%; top: 11%;" onclick="cutWire(1, 'green')"></button>
+                <button class="wire" style="height: 85%; width: 15%; position: absolute; left: 42%; top: 11%;" onclick="cutWire(1, 'blue')"></button>
+                <button class="wire" style="height: 85%; width: 15%; position: absolute; left: 74%; top: 11%;" onclick="cutWire(1, 'red')"></button>
+                <img id="wires-1" width="100%" height="100%" src="../public/assets/wires/Wire box.png">
+            </div>
+            <div id="box-2">
+                <div style="width: 100%; height: 9.5%; position: absolute; text-align: center; color: white;">
+                    <img class="exit-box" src="../public/assets/x.png" onclick="closeBox()">
+                    <span id="feedback-2" style="font-size: 200%">Click on a wire to cut it</span>
+                </div>
+                <button class="wire" style="height: 85%; width: 15%; position: absolute; left: 13%; top: 11%;" onclick="cutWire(2, 'green')"></button>
+                <button class="wire" style="height: 85%; width: 15%; position: absolute; left: 42%; top: 11%;" onclick="cutWire(2, 'blue')"></button>
+                <button class="wire" style="height: 85%; width: 15%; position: absolute; left: 74%; top: 11%;" onclick="cutWire(2, 'red')"></button>
+                <img id="wires-2" width="100%" height="100%" src="../public/assets/wires/Wire box.png">
+            </div>
         </div>
         <div class="side-bar">
            <span style="font-size: 64px;">Disrupt</span>
@@ -21,11 +46,12 @@
             </p>
             <hr>
             <p>
-                Disrupt the flow of traffic and see what happens.
+                Cut the wires on the lights to stop the signal.
             </p>
-            <p class="hint">
-                Click on a traffic light to start the game.
+            <p id="hint">
+                Click on a box next to a light.
             </p>
         </div>
+        <script src="../public/js/disrupt.js"></script>
     </body>
 </html>

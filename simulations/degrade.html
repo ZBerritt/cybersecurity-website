@@ -11,8 +11,39 @@
     </head>
 
     <body>
-        <div id="stage">
-            <img src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+        <div class="stage">
+            <img id="stage-image" src="../public/assets/intersection-with-lights.png" width="100%" height="100%">
+            <img onclick="window.location.href = '../'" id="home-btn" src="../public/assets/Home.png">
+            <img id="menu-btn" onclick="window.location.href = '../menu.html'" src="../public/assets/Menu.png">
+            <img id="hint-btn" onclick="document.getElementById('hint').style.display = 'block';" src="../public/assets/Hint.png">
+            <img id="phone" onclick="openPhone()" src="../public/assets/Phone.png">
+            <div id="phone-full">
+                <img class="exit-notebook" src="../public/assets/x.png" onclick="closePhone()">
+                <div class="screen">
+                    Hacker Terminal [Version 1.0.7]
+                    <br>
+                    (c) 2020 Zach Berritt. 
+                    <br>
+                    No rights reserved.
+                    <br><br>
+                    hacker@my-phone:~$ sudo ddos admin@187.283.32.313 -p 5678
+                    <br><br>
+                    admin@187.283.32.313:5678's password: **************
+                    <br>
+                    Authentication successful!
+                    <br><br>
+                    admin@traffic-light status: <span id="traffic-status" style="color: green;">Great</span>
+                    <br>
+                    Awaiting data...
+                    <br>
+                    <input id="ddos-area" type="text">
+                    <button onclick="sendData()">Send</button>
+                    <span id="error" style="color: red; display: none;">Maybe send a longer string..</span>
+                    <span id="success" style="color: green; display: none;">Success! The traffic light has been degraded! Click the X to see the damage.</span>
+                </input>
+                </div>
+                <img src="../public/assets/PhoneBIG.png" height="100%" width="100%">
+            </div>
         </div>
         <div class="side-bar">
            <span style="font-size: 64px;">Degrade</span>
@@ -21,11 +52,14 @@
             </p>
             <hr>
             <p>
-                Degrade the traffic light's functionality to see what happens.
+                Overload the traffic lights with data using the phone.
             </p>
-            <p class="hint">
-                Click on a traffic light to start the game.
+            <p id="hint">
+                <b>Hint:</b>
+                <br>
+                Overwhelm the traffic light by sending a long string of characters.
             </p>
         </div>
+        <script src="../public/js/degrade.js"></script>
     </body>
 </html>

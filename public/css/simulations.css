@@ -9,8 +9,9 @@ body {
 }
 
 .stage {
-    width: 75.1%;
+    width: 75%;
     height: 100%;
+    right: 0;
     position: fixed;
     display: block;
     z-index: 1;
@@ -30,7 +31,7 @@ body {
     width: 25%;
     height: 100%;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
     background-color: black;
     color: white;
@@ -48,6 +49,23 @@ body {
 .side-bar > p {
     font-size: 28px;
     margin-left: 5%;
+    pointer-events: none;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.side-bar > span {
+    pointer-events: none;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 
 .side-bar > hr {
@@ -60,12 +78,18 @@ p#hint {
     font-size: 24px;
 }
 
+#hint {
+    display: none;
+    font-size: 24px;
+}
+
 .trigger {
     position: fixed;
     display: block;
     background: transparent;
     border: none;
     color: transparent;
+    cursor: pointer;
 }
 
 .trigger:focus {
@@ -78,33 +102,46 @@ p#hint {
 }
 
 #home-btn {
-    position: fixed;
+    position: absolute;
     display: block;
     top: 1%;
-    left: 1%;
-    height: 10%;
-    width: auto;
-    z-index: 1;
-}
-
-#help-btn {
-    position: fixed;
-    display: block;
-    top: 1%;
-    left: 7%;
-    height: 10%;
-    width: auto;
-    z-index: 1;
-}
-
-#go-btn {
-    position: fixed;
-    display: block;
-    bottom: 1%;
     right: 1%;
-    height: 15%;
+    height: 10%;
     width: auto;
-    z-index: 2;
+    cursor: pointer;
+}
+
+#hint-btn {
+    position: absolute;
+    display: block;
+    top: 1%;
+    right: 17%;
+    height: 10%;
+    width: auto;
+    cursor: pointer;
+}
+
+#menu-btn {
+    position: absolute;
+    display: block;
+    top: 1%;
+    right: 9%;
+    height: 10%;
+    width: auto;
+    cursor: pointer;
+}
+
+
+.hack-btn {
+    margin-left: 20% !important;
+    background-color: #3b80e7;
+    border-radius: 10px;
+    border: 3px solid #cccccc;
+    color: #ffffff;
+    text-align: center;
+    width: 50%;
+    padding: 4%;
+    cursor: pointer;
 }
 
 
@@ -115,7 +152,7 @@ p#hint {
     width: 30%;
     height: 30%;
     top: 35%;
-    left: 20%;
+    right: 20%;
     background-color: black;
 }
 
@@ -134,10 +171,11 @@ p#hint {
     position: fixed;
     display: block;
     bottom: 1%;
-    left: 1%;
+    right: 1%;
     height: auto;
     width: 5%;
     z-index: 100;
+    cursor: pointer;
 }
 
 #notepad-full {
@@ -146,23 +184,121 @@ p#hint {
     width: 30%;
     height: auto;
     top: 30%;
-    left: 20%;
+    right: 20%;
+    pointer-events: none;
 }
 
 img.exit-notebook {
-    position: fixed;
+    position: absolute;
     display: block;
-    width: 1.5%;
+    width: 6%;
     height: auto;
-    top: 31%;
-    left: 48%;
+    top: 2%;
+    left: 93%;
+    cursor: pointer;
+    pointer-events: all;
 }
 
 #crash {
     position: fixed;
-    display: none;
+    display: none; 
     top: 40%;
-    left: 20%;
+    right: 17%;
     height: 30%;
     width: 38%;
+}
+
+/* Degrade only */
+
+#phone {
+    position: fixed;
+    display: block;
+    bottom: 1%;
+    right: 1%;
+    height: auto;
+    width: 5%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#phone-full {
+    position: fixed;
+    display: none;
+    width: 20%;
+    height: auto;
+    top: 20%;
+    right: 30%;
+    pointer-events: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.screen {
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 7%;
+    font-size: 15px;
+    word-break: break-all;
+    pointer-events: all;
+}
+
+/* Disrupt only */
+#box-1 {
+    position: fixed;
+    display: none;
+    width: 30%;
+    height: auto;
+    top: 25%;
+    right: 23%;
+    pointer-events: none;
+}
+
+#box-2 {
+    position: fixed;
+    display: none;
+    width: 30%;
+    height: auto;
+    top: 25%;
+    right: 23%;
+    pointer-events: none;
+}
+
+.wire {
+    display: block;
+    pointer-events: all;
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+}
+
+.wire:focus {
+    outline: none;
+}
+
+.exit-box {
+    position: absolute;
+    display: block;
+    width: 6%;
+    height: auto;
+    top: 15%;
+    left: 93%;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* Deceive only */
+
+
+/* Destroy only */
+
+#box-2-closed {
+    display: block;
+}
+
+#box-2-open {
+    display: none;
 }
