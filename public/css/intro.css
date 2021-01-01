@@ -4,9 +4,6 @@ body {
 }
 .continue-btn {
     position: fixed;
-    display: block;
-    bottom: 10%;
+    bottom: 0;
     right: 0;
-    height: 14%;
-    width: auto;
 }
