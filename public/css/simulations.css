@@ -1,304 +1,332 @@
-
-body, html {
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .stage {
-    width: 75%;
-    height: 100%;
-    right: 0;
-    position: fixed;
-    display: block;
-    z-index: 1;
+  width: 75%;
+  height: 100%;
+  right: 0;
+  position: fixed;
+  display: block;
+  z-index: 1;
 }
 
 .stage > img#stage-image {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .dark {
-    filter: brightness(30%); 
+  filter: brightness(30%);
 }
 
 .side-bar {
-    position: fixed;
-    display: block;
-    width: 25%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: black;
-    color: white;
+  position: fixed;
+  display: block;
+  width: 25%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
 }
 
 .side-bar > span {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .side-bar > button {
-    margin-left: 5%;
-    font-size: 20px;
+  margin-left: 5%;
+  font-size: 20px;
 }
 
 .side-bar > p {
-    font-size: 28px;
-    margin-left: 5%;
-    pointer-events: none;
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
+  font-size: 28px;
+  margin-left: 5%;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .side-bar > span {
-    pointer-events: none;
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .side-bar > hr {
-    color: white;
-    width: 90%;
+  color: white;
+  width: 90%;
 }
 
 p#hint {
-    display: none;
-    font-size: 24px;
+  display: none;
+  font-size: 24px;
 }
 
 #hint {
-    display: none;
-    font-size: 24px;
+  display: none;
+  font-size: 24px;
 }
 
 .trigger {
-    position: fixed;
-    display: block;
-    background: transparent;
-    border: none;
-    color: transparent;
-    cursor: pointer;
+  position: fixed;
+  display: block;
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
 }
 
 .trigger:focus {
-    outline: none;
+  outline: none;
 }
 
-.trigger-test { /* Used for testing trigger positions */
-    position: fixed;
-    display: block;
+.trigger-test {
+  /* Used for testing trigger positions */
+  position: fixed;
+  display: block;
 }
 
 #home-btn {
-    position: absolute;
-    display: block;
-    top: 1%;
-    right: 1%;
-    height: 10%;
-    width: auto;
-    cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 1%;
+  right: 1%;
+  height: 10%;
+  width: auto;
+  cursor: pointer;
 }
 
 #hint-btn {
-    position: absolute;
-    display: block;
-    top: 1%;
-    right: 17%;
-    height: 10%;
-    width: auto;
-    cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 1%;
+  right: 17%;
+  height: 10%;
+  width: auto;
+  cursor: pointer;
 }
 
 #menu-btn {
-    position: absolute;
-    display: block;
-    top: 1%;
-    right: 9%;
-    height: 10%;
-    width: auto;
-    cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 1%;
+  right: 9%;
+  height: 10%;
+  width: auto;
+  cursor: pointer;
 }
-
 
 .hack-btn {
-    margin-left: 20% !important;
-    background-color: #3b80e7;
-    border-radius: 10px;
-    border: 3px solid #cccccc;
-    color: #ffffff;
-    text-align: center;
-    width: 50%;
-    padding: 4%;
-    cursor: pointer;
+  margin-left: 20% !important;
+  background-color: #3b80e7;
+  border-radius: 10px;
+  border: 3px solid #cccccc;
+  color: #ffffff;
+  text-align: center;
+  width: 50%;
+  padding: 4%;
+  cursor: pointer;
 }
-
 
 /* Deny only */
 .insert-password {
-    position: fixed;
-    display: none;
-    width: 30%;
-    height: 30%;
-    top: 35%;
-    right: 20%;
-    background-color: black;
+  position: fixed;
+  display: none;
+  width: 30%;
+  height: 30%;
+  top: 35%;
+  right: 20%;
+  background-color: black;
 }
 
 .insert-password > div {
-    display: block;
-    align-items: center;
-    text-align: center;
-    color: white;
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 .insert-password > div > div > p {
-    font-size: 42px;
+  font-size: 42px;
 }
 
 #notepad {
-    position: fixed;
-    display: block;
-    bottom: 1%;
-    right: 1%;
-    height: auto;
-    width: 5%;
-    z-index: 100;
-    cursor: pointer;
+  position: fixed;
+  display: block;
+  bottom: 1%;
+  right: 1%;
+  height: auto;
+  width: 5%;
+  z-index: 100;
+  cursor: pointer;
 }
 
 #notepad-full {
-    position: fixed;
-    display: none;
-    width: 30%;
-    height: auto;
-    top: 30%;
-    right: 20%;
-    pointer-events: none;
+  position: fixed;
+  display: none;
+  width: 30%;
+  height: auto;
+  top: 30%;
+  right: 20%;
+  pointer-events: none;
 }
 
 img.exit-notebook {
-    position: absolute;
-    display: block;
-    width: 6%;
-    height: auto;
-    top: 2%;
-    left: 93%;
-    cursor: pointer;
-    pointer-events: all;
+  position: absolute;
+  display: block;
+  width: 6%;
+  height: auto;
+  top: 2%;
+  left: 93%;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 #crash {
-    position: fixed;
-    display: none; 
-    top: 40%;
-    right: 17%;
-    height: 30%;
-    width: 38%;
+  position: fixed;
+  display: none;
+  top: 40%;
+  right: 17%;
+  height: 30%;
+  width: 38%;
 }
 
 /* Degrade only */
 
 #phone {
-    position: fixed;
-    display: block;
-    bottom: 1%;
-    right: 1%;
-    height: auto;
-    width: 5%;
-    z-index: 100;
-    cursor: pointer;
+  position: fixed;
+  display: block;
+  bottom: 1%;
+  right: 1%;
+  height: auto;
+  width: 5%;
+  z-index: 100;
+  cursor: pointer;
 }
 
 #phone-full {
-    position: fixed;
-    display: none;
-    width: 20%;
-    height: auto;
-    top: 20%;
-    right: 30%;
-    pointer-events: none;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+  position: fixed;
+  display: none;
+  width: 20%;
+  height: auto;
+  top: 20%;
+  right: 30%;
+  pointer-events: none;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
 }
 
 .screen {
-    display: block;
-    position: absolute;
-    width: 90%;
-    height: 80%;
-    left: 5%;
-    top: 7%;
-    font-size: 15px;
-    word-break: break-all;
-    pointer-events: all;
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  left: 5%;
+  top: 7%;
+  font-size: 15px;
+  word-break: break-all;
+  pointer-events: all;
 }
 
 /* Disrupt only */
 #box-1 {
-    position: fixed;
-    display: none;
-    width: 30%;
-    height: auto;
-    top: 25%;
-    right: 23%;
-    pointer-events: none;
+  position: fixed;
+  display: none;
+  width: 30%;
+  height: auto;
+  top: 25%;
+  right: 23%;
+  pointer-events: none;
 }
 
 #box-2 {
-    position: fixed;
-    display: none;
-    width: 30%;
-    height: auto;
-    top: 25%;
-    right: 23%;
-    pointer-events: none;
+  position: fixed;
+  display: none;
+  width: 30%;
+  height: auto;
+  top: 25%;
+  right: 23%;
+  pointer-events: none;
 }
 
 .wire {
-    display: block;
-    pointer-events: all;
-    background: transparent;
-    border: none;
-    color: transparent;
-    cursor: pointer;
+  display: block;
+  pointer-events: all;
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
 }
 
 .wire:focus {
-    outline: none;
+  outline: none;
 }
 
 .exit-box {
-    position: absolute;
-    display: block;
-    width: 6%;
-    height: auto;
-    top: 15%;
-    left: 93%;
-    cursor: pointer;
-    pointer-events: all;
+  position: absolute;
+  display: block;
+  width: 6%;
+  height: auto;
+  top: 15%;
+  left: 93%;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 /* Deceive only */
 
-
 /* Destroy only */
 
 #box-2-closed {
-    display: block;
+  display: block;
 }
 
 #box-2-open {
-    display: none;
+  display: none;
+}
+
+#box-1-closed {
+  display: block;
+}
+
+#box-1-open {
+  display: none;
+}
+
+.box-open {
+  pointer-events: all;
+}
+
+.box-closed {
+  pointer-events: all;
+}
+
+.switch {
+  position: absolute;
+  display: block;
+  pointer-events: all;
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+}
+
+.switch:focus {
+  outline: none;
 }
