@@ -5,8 +5,8 @@ body {
 .continue-btn {
     position: fixed;
     display: block;
-    right: 7px;
-    bottom: 10%;
-    height: 5%;
+    bottom: 0;
+    right: 0;
+    height: 14%;
     width: auto;
 }
