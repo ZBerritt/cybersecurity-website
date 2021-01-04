@@ -1,72 +1,64 @@
 body {
-    background-image: url("../assets/cyber-cars.jpg");
-    color: white;
+  background-image: url("../assets/cyber-cars.jpg");
+  color: white;
 }
 
 .title-text {
-    text-align: center;
-    align-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 .menu {
-    text-align: center;
+  text-align: center;
 }
 
 .row-1 {
-    display: flex;
-    align-items: center;
-    margin-top: 5%;
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
 }
 .row-1 > div {
-    flex: 1 0 0%;
+  flex: 1 0 0%;
 }
 
 .row-1 > div > a {
-    color: white;
-    font-size: 24px;
+  color: white;
+  font-size: 24px;
 }
 
 .row-1 > div > a > img {
-    width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 .row-2 {
-    display: flex;
-    align-items: center;
-    margin-top: 5%;
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
 }
 .row-2 > div {
-    flex: 1 0 0%;
+  flex: 1 0 0%;
 }
 
 .row-2 > div > a {
-    color: white;
-    font-size: 24px;
+  color: white;
+  font-size: 24px;
 }
 
 .row-2 > div > a > img {
-    width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 img.menu-border {
-    border: 4px solid white;
+  border: 4px solid white;
 }
 
-.finish-btn {
-    position: fixed;
-    display: block;
-    right: 7px;
-    bottom: 7px;
-    height: 14%;
-    width: auto;
-}
-.home-btn{
-    position: fixed;
-    display: block;
-    left: 7px;
-    bottom: 7px;
-    height: 14%;
-    width: auto;
+.home-btn {
+  position: fixed;
+  display: block;
+  left: 7px;
+  bottom: 7px;
+  height: 14%;
+  width: auto;
 }
