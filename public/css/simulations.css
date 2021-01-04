@@ -232,6 +232,17 @@ img.exit-notebook {
   color: white;
 }
 
+img.exit-phone {
+  position: absolute;
+  display: block;
+  width: 5%;
+  height: auto;
+  top: 2%;
+  left: 93%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
 .screen {
   display: block;
   position: absolute;
