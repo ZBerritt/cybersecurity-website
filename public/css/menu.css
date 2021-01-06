@@ -57,7 +57,7 @@ img.menu-border {
 .home-btn {
   position: fixed;
   display: block;
-  left: 7px;
+  right: 7px;
   bottom: 7px;
   height: 14%;
   width: auto;
