@@ -271,6 +271,12 @@ img.exit-phone {
   pointer-events: all;
 }
 
+.phone-input {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
 /* Disrupt only */
 #box-1 {
   position: fixed;
