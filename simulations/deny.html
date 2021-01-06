@@ -25,36 +25,46 @@
                 <img src="../public/assets/Questions.png" height="100%" width="100%">
             </div>
             <div id="password-1" class="insert-password">
-                <div style="text-align: right; width: 100%; height: 10%; background-color: gray;">
-                    <img src="../public/assets/x.png" style="height: 80%; width: auto; margin-top: .5%; margin-right: .5%; cursor: pointer;" onclick="exitPassword()">
+                <div class="pass-top-bar">
+                    <img src="../public/assets/x.png" style="position: absolute; height: 8%; width: auto; top: .5%; right: .5%; cursor: pointer;" onclick="exitPassword()">
                 </div>
                 <div>
-                    <h1>Insert Password for Light 1:</h1>
-                    <div>
-                        <input id="input-1" type="password">
-                        <button onclick="enterOne()" id="enter-1">Enter</button>
-                    </div>
-                    <div>
-                        <p id="input1-error" style="color: red; display: none;">Incorrect Password!</p>
-                        <p id="input1-success" style="color: green; display: none;">Success! Exiting...</p>
-                    </div>
+                    <h1>Light #1 Login</h1>
+                    <table class="password-input" align="center" style="display: table; text-align: center;">
+                        <tr>
+                            <th><span>Username:</span></th>
+                            <th><input type="text" value="l33t_h4x0r" readonly="readonly"></th>
+                        </tr>
+                        <tr style="display: table-row;">
+                            <th><span>Password:</span></th>
+                            <th><input id="input-1" type="password"></th>
+                        </tr>
+                    </table>
+                        <button onclick="enterOne()" id="enter-1" style="position: absolute; bottom: 1%; right: 1%; height: 20%; width: 25%; font-size: 210%;">Enter</button>
+                        <p id="input1-error" style="color: red; display: none; font-size: 140%;">Incorrect Password!</p>
+                        <p id="input1-success" style="color: green; display: none; font-size: 140%;">Success! Exiting...</p>
                 </div>
             </div>
 
             <div id="password-2" class="insert-password">
-                <div style="text-align: right; width: 100%; height: 10%; background-color: gray;">
-                    <img src="../public/assets/x.png" style="height: 80%; width: auto; margin-top: .5%; margin-right: .5%; cursor: pointer;" onclick="exitPassword()">
+                <div class="pass-top-bar">
+                    <img src="../public/assets/x.png" style="position: absolute; height: 8%; width: auto; top: .5%; right: .5%; cursor: pointer;" onclick="exitPassword()">
                 </div>
                 <div>
-                    <h1>Insert Password for Light 2:</h1>
-                    <div>
-                        <input id="input-2" type="password">
-                        <button onclick="enterTwo()" id="enter-2">Enter</button>
-                    </div>
-                    <div>
-                        <p id="input2-error" style="color: red; display: none;">Incorrect Password!</p>
-                        <p id="input2-success" style="color: green; display: none;">Success! Exiting...</p>
-                    </div>
+                    <h1>Light #2 Login</h1>
+                    <table class="password-input" align="center" style="display: table; text-align: center;">
+                        <tr>
+                            <th><span>Username:</span></th>
+                            <th><input type="text" value="l33t_h4x0r" readonly="readonly"></th>
+                        </tr>
+                        <tr style="display: table-row;">
+                            <th><span>Password:</span></th>
+                            <th><input id="input-2" type="password"></th>
+                        </tr>
+                    </table>
+                        <button onclick="enterTwo()" id="enter-1" style="position: absolute; bottom: 1%; right: 1%; height: 20%; width: 25%; font-size: 210%;">Enter</button>
+                        <p id="input2-error" style="color: red; display: none; font-size: 140%;">Incorrect Password!</p>
+                        <p id="input2-success" style="color: green; display: none; font-size: 140%;">Success! Exiting...</p>
                 </div>
             </div>
         </div>
