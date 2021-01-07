@@ -57,6 +57,8 @@ function switchOne() {
     if (complete[0] && complete[1]) {
         stageImage.src = "../public/assets/destroy/chaos.png";
         destroySuccess.style.display = "block";
+    } else {
+        stageImage.src = "../public/assets/destroy/Right Spark.png"
     }
 }
 
@@ -67,5 +69,7 @@ function switchTwo() {
     if (complete[0] && complete[1]) {
         stageImage.src = "../public/assets/destroy/chaos.png";
         destroySuccess.style.display = "block";
+    } else {
+        stageImage.src = "../public/assets/destroy/Left Spark.png"
     }
 }
