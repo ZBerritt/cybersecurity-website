@@ -372,3 +372,38 @@ img.exit-phone {
 .switch:focus {
   outline: none;
 }
+
+.box-riddle {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top: 12%;
+  text-align: center;
+}
+
+.box-input {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top: 50%;
+  text-align: center;
+}
+
+.open-box {
+  position: absolute;
+  display: block;
+  pointer-events: all;
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  width: 11.75%;
+  height: 21%;
+  top: 37%;
+  left: 83.25%;
+  z-index: 1;
+}
+
+.open-box:focus {
+  outline: none;
+}

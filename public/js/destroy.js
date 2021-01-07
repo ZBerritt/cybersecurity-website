@@ -4,6 +4,7 @@ var boxTwo = document.getElementById("box-2");
 var boxClosed = [document.getElementById("box-1-closed"), document.getElementById("box-2-closed")];
 var boxOpen = [document.getElementById("box-1-open"), document.getElementById("box-2-open")];
 var triggers = [document.getElementById("box-1-trigger"), document.getElementById("box-2-trigger")];
+var errors = [document.getElementById("box-1-error"), document.getElementById("box-2-error")]
 var code1 = document.getElementById("input-1");
 var code2 = document.getElementById("input-2");
 var hacking = false; // Is the user hacking
@@ -43,6 +44,8 @@ function inputCode(box) {
         // Correct code
         boxClosed[box - 1].style.display = "none";
         boxOpen[box - 1].style.display = "block";
+    } else {
+        errors[box - 1].style.display = "block";
     }
 }
 
