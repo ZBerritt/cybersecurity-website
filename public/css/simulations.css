@@ -275,7 +275,7 @@ img.exit-phone {
   height: 80%;
   left: 5%;
   top: 7%;
-  font-size: 100%;
+  font-size: 0.8vw;
   word-break: break-all;
   pointer-events: all;
 }
