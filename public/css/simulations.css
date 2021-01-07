@@ -101,7 +101,7 @@ p#hint {
   cursor: unset;
 }
 
-.trigger:focus {
+.trigger-disabled:focus {
   outline: none;
 }
 
