@@ -51,7 +51,7 @@ function switchOne() {
     document.getElementById("switch-1").src = "../public/assets/destroy/Switch ON.png"
     triggers[0].className = "trigger-disabled";
     if (complete[0] && complete[1]) {
-        // Result
+        stageImage.src = "../public/assets/destroy/chaos.png";
     }
 }
 
@@ -60,6 +60,6 @@ function switchTwo() {
     document.getElementById("switch-2").src = "../public/assets/destroy/Switch ON.png"
     triggers[1].className = "trigger-disabled";
     if (complete[0] && complete[1]) {
-        // Result
+        stageImage.src = "../public/assets/destroy/chaos.png";
     }
 }
