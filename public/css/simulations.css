@@ -105,6 +105,10 @@ p#hint {
   outline: none;
 }
 
+.trigger-enabled:focus {
+  outline: none;
+}
+
 .trigger-test {
   /* Used for testing trigger positions */
   position: fixed;
