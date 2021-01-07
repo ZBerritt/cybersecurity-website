@@ -83,13 +83,22 @@ p#hint {
   font-size: 24px;
 }
 
-.trigger {
+.trigger-enabled {
+  position: fixed;
+  display: block;
+  background: transparent;
+  border: 2px solid red;
+  color: transparent;
+  cursor: pointer;
+}
+
+.trigger-disabled {
   position: fixed;
   display: block;
   background: transparent;
   border: none;
   color: transparent;
-  cursor: pointer;
+  cursor: unset;
 }
 
 .trigger:focus {
@@ -266,7 +275,7 @@ img.exit-phone {
   height: 80%;
   left: 5%;
   top: 7%;
-  font-size: 15px;
+  font-size: 100%;
   word-break: break-all;
   pointer-events: all;
 }

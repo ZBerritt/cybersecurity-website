@@ -1,6 +1,7 @@
 var stageImage = document.getElementById("stage-image");
 var boxOne = document.getElementById("box-1");
 var boxTwo = document.getElementById("box-2");
+var triggers = [document.getElementById("box-1-trigger"), document.getElementById("box-2-trigger")];
 var hacking = false; // Is the user hacking
 var cut = [[], []];
 var correct = ["blue", "green"];
@@ -9,14 +10,14 @@ var complete = [false, false];
 function boxOneTrigger() {
     if (hacking) return;
     stageImage.className = "dark";
-    boxTwo.style.display = "block"
+    boxOne.style.display = "block"
     hacking = true;
 }
 
 function boxTwoTrigger() {
     if (hacking) return;
     stageImage.className = "dark";
-    boxOne.style.display = "block"
+    boxTwo.style.display = "block"
     hacking = true;
 }
 
@@ -39,6 +40,7 @@ function cutWire(box, color) {
         feedback.style.color = "green";
         feedback.innerText = "Correct!";
         complete[box - 1] = true;
+        triggers[box - 1].className = "trigger-disabled";
         stageImage.src = "../public/assets/disrupt/" + getBackground() + ".png"
     } else {
         feedback.style.color = "red";

@@ -2,7 +2,8 @@ var stageImage = document.getElementById("stage-image");
 var boxOne = document.getElementById("box-1");
 var boxTwo = document.getElementById("box-2");
 var boxClosed = [document.getElementById("box-1-closed"), document.getElementById("box-2-closed")];
-var boxOpen = [document.getElementById("box-1-open"), document.getElementById("box-2-open")]
+var boxOpen = [document.getElementById("box-1-open"), document.getElementById("box-2-open")];
+var triggers = [document.getElementById("box-1-trigger"), document.getElementById("box-2-trigger")];
 var code1 = document.getElementById("input-1");
 var code2 = document.getElementById("input-2");
 var hacking = false; // Is the user hacking
@@ -12,14 +13,14 @@ var complete = [false, false];
 function boxOneTrigger() {
     if (hacking) return;
     stageImage.className = "dark";
-    boxTwo.style.display = "block"
+    boxOne.style.display = "block"
     hacking = true;
 }
 
 function boxTwoTrigger() {
     if (hacking) return;
     stageImage.className = "dark";
-    boxOne.style.display = "block"
+    boxTwo.style.display = "block"
     hacking = true;
 }
 
@@ -48,6 +49,7 @@ function inputCode(box) {
 function switchOne() {
     complete[0] = true;
     document.getElementById("switch-1").src = "../public/assets/destroy/Switch ON.png"
+    triggers[0].className = "trigger-disabled";
     if (complete[0] && complete[1]) {
         // Result
     }
@@ -56,6 +58,7 @@ function switchOne() {
 function switchTwo() {
     complete[1] = true;
     document.getElementById("switch-2").src = "../public/assets/destroy/Switch ON.png"
+    triggers[1].className = "trigger-disabled";
     if (complete[0] && complete[1]) {
         // Result
     }

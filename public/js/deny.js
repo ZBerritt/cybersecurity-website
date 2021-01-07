@@ -2,6 +2,7 @@ var stageImage = document.getElementById("stage-image");
 var passOne = document.getElementById("password-1");
 var passTwo = document.getElementById("password-2");
 var notepad = document.getElementById("notepad-full");
+var triggers = [document.getElementById("light-1-trigger"), document.getElementById("light-2-trigger")];
 var passwordOpen = false;
 var foundPassword1 = false;
 var foundPassword2 = false;
@@ -49,10 +50,11 @@ function enterOne() {
     if (passText.toLowerCase() === "cpu") {
         foundPassword1 = true;
         document.getElementById("input1-success").style.display = "block";
+        triggers[0].className = "trigger-disabled";
         setTimeout(exitPassword, 3000);
     } else {
         document.getElementById("input1-error").style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById("input1-error").style.display = "none";
         }, 3000);
     }
@@ -63,10 +65,11 @@ function enterTwo() {
     if (passText.toLowerCase() === "123456") {
         foundPassword2 = true;
         document.getElementById("input2-success").style.display = "block";
+        triggers[1].className = "trigger-disabled";
         setTimeout(exitPassword, 3000);
     } else {
         document.getElementById("input2-error").style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById("input2-error").style.display = "none";
         }, 3000);
     }
@@ -80,7 +83,7 @@ function hackLight() {
         hacked = true;
     } else {
         document.getElementById("deny-error").style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById("deny-error").style.display = "none";
         }, 2000)
     }
