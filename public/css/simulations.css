@@ -394,20 +394,23 @@ img.exit-phone {
 }
 
 .open-box {
-  position: absolute;
-  display: block;
-  pointer-events: all;
-  background: transparent;
-  border: none;
-  color: transparent;
+  margin-top: 0.5vw;
+  background-color: #3b80e7;
+  border-radius: 10px;
+  border: 3px solid #cccccc;
+  color: #ffffff;
+  text-align: center;
+  width: 30%;
+  padding: 4%;
   cursor: pointer;
-  width: 11.75%;
-  height: 21%;
-  top: 37%;
-  left: 83.25%;
-  z-index: 1;
+  font-size: 1.5vw;
 }
 
-.open-box:focus {
-  outline: none;
+@keyframes incorrect {
+  from {
+    background-color: #3b80e7;
+  }
+  to {
+    background-color: #8b0000;
+  }
 }

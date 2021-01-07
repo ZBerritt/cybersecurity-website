@@ -24,7 +24,6 @@
                     <span style="font-size: 2vw">Wire Box #1</span>
                 </div>
                 <div class="box-closed" id="box-1-closed">
-                    <button class="open-box" onclick="inputCode(1)"></button>
                     <img id="wires-1" width="100%" height="100%" src="../public/assets/destroy/box.png">
                     <div class="box-riddle">
                         <span style="font-size: 2.5vw;">Sunny Evenings Created Really Exciting Times.</span> 
@@ -32,6 +31,8 @@
                     <div class="box-input">
                         <span style="font-size: 1vw;">Enter the Code: </span>
                         <input style="font-size: 1vw;"autocomplete="off" id="input-1" type="password">
+                        <br>
+                        <button class="open-box" onclick="inputCode(1)">Enter</button>
                         <span id="box-1-error" style="font-size: 2vw; color: #8b0000; display: none;">Incorrect Code!</span>
                     </div>
                 </div>
@@ -46,8 +47,7 @@
                     <img class="exit-box" src="../public/assets/x.png" onclick="closeBox()">
                     <span style="font-size: 2vw">Wire Box #2</span>
                 </div>
-                <div class="box-closed" id="box-1-closed">
-                    <button class="open-box" onclick="inputCode(1)"></button>
+                <div class="box-closed" id="box-2-closed">
                     <img id="wires-2" width="100%" height="100%" src="../public/assets/destroy/box.png">
                     <div class="box-riddle">
                         <span style="font-size: 2.5vw;">03 15 04 05</span> 
@@ -55,12 +55,14 @@
                     <div class="box-input">
                         <span style="font-size: 1vw;">Enter the Code: </span>
                         <input style="font-size: 1vw;"autocomplete="off" id="input-2" type="password">
+                        <br>
+                        <button class="open-box" onclick="inputCode(2)">Enter</button>
                         <span id="box-2-error" style="font-size: 2vw; color: #8b0000; display: none;">Incorrect Code!</span>
                     </div>
                 </div>
                 <div class="box-open" id="box-2-open">
                     <img id="switch-2" width="100%" height="100%" src="../public/assets/destroy/Switch OFF.png">
-                    <button onclick="switchOne()" style="width: 20%; height: 40%; top: 31%; left: 42%;" class="switch"></button>
+                    <button onclick="switchTwo()" style="width: 20%; height: 40%; top: 31%; left: 42%;" class="switch"></button>
                 </div>
             </div>
         </div>
@@ -74,8 +76,8 @@
                 Hack into the traffic light power boxes to overload the electrical system.
             </p>
             <p id="hint">
-                Box 1: The capital seems a bit out of place.
-                Box 2: Maybe the numbers match up with letters.
+                Box 1: The Capital letters seem odd...
+                Box 2: Maybe the numbers match up with letters...
             </p>
             <script src="../public/js/destroy.js"></script>
             <script src="../public/js/idle-timer.js"></script>
