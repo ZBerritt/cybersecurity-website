@@ -405,12 +405,3 @@ img.exit-phone {
   cursor: pointer;
   font-size: 1.5vw;
 }
-
-@keyframes incorrect {
-  from {
-    background-color: #3b80e7;
-  }
-  to {
-    background-color: #8b0000;
-  }
-}
