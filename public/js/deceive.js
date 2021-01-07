@@ -4,6 +4,7 @@ var smallPhone = document.getElementById("phone");
 var stageImage = document.getElementById("stage-image");
 var passInput = document.getElementById("pass-input");
 var passConfirm = document.getElementById("pass-confirm");
+var deceiveSuccess = document.getElementById("deceive-success")
 var passwordOpen = false;
 var password;
 var phoneOpen = false;
@@ -29,7 +30,7 @@ function testPassword() {
     if (input !== passConfirm.value) {
         clearErrors();
         document.getElementById("match-error").style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById("match-error").style.display = "none";
         }, 3000);
         return;
@@ -46,7 +47,7 @@ function testPassword() {
     } else {
         clearErrors();
         document.getElementById("input-success").style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             exitPassword();
             password = input;
             smallPhone.style.display = "block";
@@ -62,9 +63,9 @@ function clearErrors() {
 function passwordError() {
     clearErrors();
     document.getElementById("input-error").style.display = "block";
-        setTimeout(function() {
-            document.getElementById("input-error").style.display = "none";
-        }, 3000);
+    setTimeout(function () {
+        document.getElementById("input-error").style.display = "none";
+    }, 3000);
 }
 
 function openPhone() {
@@ -85,9 +86,11 @@ function closePhone() {
 function redChoice() {
     stageImage.src = "../public/assets/deceive/Lights red.png";
     document.getElementById("done-message").style.display = "block";
+    deceiveSuccess.style.display = "block";
 }
 
 function greenChoice() {
     stageImage.src = "../public/assets/deceive/Lights green.png";
     document.getElementById("done-message").style.display = "block";
+    deceiveSuccess.style.display = "block";
 }

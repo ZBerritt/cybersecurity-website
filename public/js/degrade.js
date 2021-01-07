@@ -5,6 +5,7 @@ var inputData = document.getElementById("ddos-area");
 var lightStatus = document.getElementById("traffic-status");
 var error = document.getElementById("error");
 var success = document.getElementById("success");
+var degradeSuccess = document.getElementById("degrade-success");
 var trafficLightHealth = 3; // 3 great, 2 Good, 1 Ok, 0 Poor 
 
 function openPhone() {
@@ -27,7 +28,7 @@ function sendData() {
     console.log(text, text.length)
     if (text.length < 15) {
         error.style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             error.style.display = "none";
         }, 3000);
 
@@ -39,6 +40,7 @@ function sendData() {
         if (trafficLightHealth === 0) {
             success.style.display = "block";
             stageImage.src = "../public/assets/Traffic Intersection.png";
+            degradeSuccess.style.display = "block";
         }
     }
 }

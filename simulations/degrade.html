@@ -39,7 +39,7 @@
                     <input class="phone-input" id="ddos-area" type="text">
                     <button onclick="sendData()">Send</button>
                     <span id="error" style="color: red; display: none;">Maybe send a longer string..</span>
-                    <span id="success" style="color: green; display: none;">Success! The traffic light has been degraded! Click the X to see the damage.</span>
+                    <span id="success" style="color: green; display: none;">Press the X to see the damage</span>
                 </input>
                 </div>
                 <img src="../public/assets/PhoneBIG.png" height="100%" width="100%">
@@ -58,6 +58,9 @@
                 <b>Hint:</b>
                 <br>
                 Overwhelm the traffic light by sending a long string of characters.
+            </p>
+            <p id="degrade-success" style="color: green; display: none;">
+                Success! The light has been overloaded with data and its performance has been hindered.
             </p>
         </div>
         <script src="../public/js/degrade.js"></script>

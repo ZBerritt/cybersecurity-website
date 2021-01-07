@@ -7,6 +7,7 @@ var triggers = [document.getElementById("box-1-trigger"), document.getElementByI
 var errors = [document.getElementById("box-1-error"), document.getElementById("box-2-error")];
 var code1 = document.getElementById("input-1");
 var code2 = document.getElementById("input-2");
+var destroySuccess = document.getElementById("destroy-success");
 var hacking = false; // Is the user hacking
 var codes = ["secret", "code"] // Dont make this case sensitive you dumb idiot
 var complete = [false, false];
@@ -55,6 +56,7 @@ function switchOne() {
     triggers[0].className = "trigger-disabled";
     if (complete[0] && complete[1]) {
         stageImage.src = "../public/assets/destroy/chaos.png";
+        destroySuccess.style.display = "block";
     }
 }
 
@@ -64,5 +66,6 @@ function switchTwo() {
     triggers[1].className = "trigger-disabled";
     if (complete[0] && complete[1]) {
         stageImage.src = "../public/assets/destroy/chaos.png";
+        destroySuccess.style.display = "block";
     }
 }
