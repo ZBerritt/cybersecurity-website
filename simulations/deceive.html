@@ -62,11 +62,15 @@
                     <br>
                     <span style="color: yellow;">What color will you change the lights to (select with mouse):</span>
                     <br>
-                    <span onclick="greenChoice()" style="color: green; cursor: pointer;">Green</span>
+                    <div id="color-choices">
+                        <span onclick="greenChoice()" style="color: green; cursor: pointer;">Green</span>
+                        <br>
+                        <span onclick="redChoice()" style="color: red; cursor: pointer;">Red</span>
+                        <br> 
+                    </div>
                     <br>
-                    <span onclick="redChoice()" style="color: red; cursor: pointer;">Red</span>
-                    <br><br>
-                    <span id="done-message" style="display: none;">Success! The lights have changed. Press the X to see the damage.</span>
+                    <p id="green-message" style="display: none;">Success! The lights are now <span style="color: green;">green</span> and a crash has occured (click the X to see the damage).</p>
+                    <p id="red-message" style="display: none;">Success! The lights are now <span style="color: red;">red</span> and traffic is no longer flowing (click the X to see the damage).</p>
                 </input>
                 </div>
                 <img src="../public/assets/PhoneBIG.png" height="100%" width="100%">
@@ -93,7 +97,7 @@
                 </ol>
             </div>
             <p id="deceive-success" style="display: none; color: green">
-                Success! The lights have been manipulated, tricking the drivers and causing damage.
+                Success! The lights have been manipulated, tricking the drivers.
             </p>
         </div>
         <script src="../public/js/deceive.js"></script>

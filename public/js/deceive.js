@@ -4,10 +4,12 @@ var smallPhone = document.getElementById("phone");
 var stageImage = document.getElementById("stage-image");
 var passInput = document.getElementById("pass-input");
 var passConfirm = document.getElementById("pass-confirm");
-var deceiveSuccess = document.getElementById("deceive-success")
+var deceiveSuccess = document.getElementById("deceive-success");
+var colorChoices = document.getElementById("color-choices");
 var passwordOpen = false;
 var password;
 var phoneOpen = false;
+var done = false;
 
 
 function start() {
@@ -84,13 +86,19 @@ function closePhone() {
 
 
 function redChoice() {
+    if (done) return;
     stageImage.src = "../public/assets/deceive/Lights red.png";
-    document.getElementById("done-message").style.display = "block";
+    document.getElementById("red-message").style.display = "block";
+    done = true;
+    colorChoices.style.display = "none";
     deceiveSuccess.style.display = "block";
 }
 
 function greenChoice() {
+    if (done) return;
     stageImage.src = "../public/assets/deceive/Lights green.png";
-    document.getElementById("done-message").style.display = "block";
+    document.getElementById("green-message").style.display = "block";
+    done = true;
+    colorChoices.style.display = "none";
     deceiveSuccess.style.display = "block";
 }
