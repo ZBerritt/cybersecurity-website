@@ -79,9 +79,9 @@ function getBackground() {
     if (complete[0] && complete[1]) {
         return "Signal none";
     } else if (complete[0]) {
-        return "Signal right";
-    } else if (complete[1]) {
         return "Signal left";
+    } else if (complete[1]) {
+        return "Signal right";
     } else {
         return "Signal both";
     }
