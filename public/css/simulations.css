@@ -58,6 +58,10 @@ body {
   user-select: none;
 }
 
+.directions {
+  font-size: 1.2vw;
+}
+
 .side-bar > span {
   pointer-events: none;
   -webkit-touch-callout: none;
