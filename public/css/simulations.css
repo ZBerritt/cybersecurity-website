@@ -205,7 +205,7 @@ p#hint {
   bottom: 1%;
   right: 1%;
   height: auto;
-  width: 5%;
+  width: 10%;
   z-index: 100;
   cursor: pointer;
 }
@@ -248,7 +248,7 @@ img.exit-notebook {
   bottom: 1%;
   right: 1%;
   height: auto;
-  width: 5%;
+  width: 10%;
   z-index: 100;
   cursor: pointer;
 }
