@@ -45,7 +45,7 @@ function testPassword() {
         setTimeout(function () {
             exitPassword();
             document.getElementById("deny-success").style.display = "block";
-            document.getElementById("crash").style.display = "block";
+            stageImage.src = "../public/assets/Lights off crash.png"
             complete = true;
             // Finished
         }, 3000)
