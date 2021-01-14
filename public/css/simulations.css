@@ -213,10 +213,10 @@ p#hint {
 #notepad-full {
   position: fixed;
   display: none;
-  width: 30%;
+  width: 45%;
   height: auto;
-  top: 30%;
-  right: 20%;
+  top: 20%;
+  right: 15%;
   pointer-events: none;
 }
 
@@ -256,12 +256,13 @@ img.exit-notebook {
 #phone-full {
   position: fixed;
   display: none;
-  width: 20%;
+  width: 30%;
   height: auto;
-  top: 20%;
-  right: 30%;
+  top: 5%;
+  right: 25%;
   pointer-events: none;
   font-family: "Courier New", Courier, monospace;
+  font-size: 2vw;
   color: white;
 }
 
@@ -283,7 +284,7 @@ img.exit-phone {
   height: 80%;
   left: 5%;
   top: 7%;
-  font-size: 0.8vw;
+  font-size: 1.25vw;
   word-break: break-all;
   pointer-events: all;
 }
