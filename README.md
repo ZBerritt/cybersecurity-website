@@ -18,6 +18,7 @@ All issues with the software can be reported on the issue tab. For direct commun
 Anyone is welcome to create pull requests. For any major changes, open an issue to discuss before making any changes.
 
 ## License
+[MIT](https://github.com/ZBerritt/cybersecurity-website/blob/main/LICENSE)
 
 ## Authors and Acknowledgment
 Created by Zachary Berritt, Patrick Miller and Peter Gallina.
