@@ -1,11 +1,15 @@
 # Traffic Light Hacking - The 5 Ds of Hacking
 An educational cybersecurity website aimed at students from grades 8-12
+
+Fully operational site: **https://zberritt.github.io/cybersecurity-website**
+
+
 ## Goals
 * Expose students from grades 8-12 on the dangers of hacking
 * Expose students to the basics of cybersecurity
 
 ## Hosting
-**TO-DO (seriously don't forget this)**
+The files are pure HTML, CSS and JS with no backend components. Files should be compatible with any hosting solution (apache, nginx, github pages, etc). 
 
 ## Support
 All issues with the software can be reported on the issue tab. For direct communication, please send an email to zberritt@gmail.com.
