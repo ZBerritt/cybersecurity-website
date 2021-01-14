@@ -124,8 +124,8 @@ p#hint {
   display: block;
   top: 1%;
   right: 1%;
-  height: 10%;
-  width: auto;
+  height: auto;
+  width: 8%;
   cursor: pointer;
 }
 
@@ -133,9 +133,9 @@ p#hint {
   position: absolute;
   display: block;
   top: 1%;
-  right: 17%;
-  height: 10%;
-  width: auto;
+  right: 19%;
+  height: auto;
+  width: 8%;
   cursor: pointer;
 }
 
@@ -143,9 +143,9 @@ p#hint {
   position: absolute;
   display: block;
   top: 1%;
-  right: 9%;
-  height: 10%;
-  width: auto;
+  right: 10%;
+  height: auto;
+  width: 8%;
   cursor: pointer;
 }
 
