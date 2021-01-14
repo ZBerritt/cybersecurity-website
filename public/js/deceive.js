@@ -1,77 +1,88 @@
-var passwordInput = document.getElementById("password");
-var phone = document.getElementById("phone-full");
-var smallPhone = document.getElementById("phone");
 var stageImage = document.getElementById("stage-image");
-var passInput = document.getElementById("pass-input");
-var passConfirm = document.getElementById("pass-confirm");
+var passOne = document.getElementById("password-1");
+var passTwo = document.getElementById("password-2");
+var notepad = document.getElementById("notepad-full");
+var triggers = [document.getElementById("light-1-trigger"), document.getElementById("light-2-trigger")];
+var passwordOpen = false;
+var foundPassword1 = false;
+var foundPassword2 = false;
+var hacked = false;
+var notepadOpen = false;
 var deceiveSuccess = document.getElementById("deceive-success");
 var colorChoices = document.getElementById("color-choices");
-var passwordOpen = false;
-var password;
+var phone = document.getElementById("phone-full");
+var smallPhone = document.getElementById("phone");
 var phoneOpen = false;
 var done = false;
 
-
-function start() {
-    if (password) return;
+function lightOneTrigger() {
+    if (passwordOpen || foundPassword1 || notepadOpen) return;
     stageImage.className = "dark";
-    passwordInput.style.display = "block"
+    passOne.style.display = "block"
     passwordOpen = true;
+}
+
+function lightTwoTrigger() {
+    if (passwordOpen || foundPassword2 || notepadOpen) return;
+    stageImage.className = "dark";
+    passTwo.style.display = "block"
+    passwordOpen = true;
+}
+
+function openNotepad() {
+    if (notepadOpen || passwordOpen) return;
+    stageImage.className = "dark";
+    notepad.style.display = "block"
+    notepadOpen = true;
+}
+
+function closeNotepad() {
+    if (!notepadOpen) return;
+    stageImage.className = "";
+    notepad.style.display = "none";
+    notepadOpen = false;
 }
 
 function exitPassword() {
     if (!passwordOpen) return;
     stageImage.className = "";
-    passwordInput.style.display = "none";
+    passTwo.style.display = "none";
+    passOne.style.display = "none";
     passwordOpen = false;
 }
 
-function testPassword() {
-    if (password) return;
-    var input = passInput.value;
-    if (input !== passConfirm.value) {
-        clearErrors();
-        document.getElementById("match-error").style.display = "block";
-        setTimeout(function () {
-            document.getElementById("match-error").style.display = "none";
-        }, 3000);
-        return;
-    }
-    if (input.length < 10) {
-        return passwordError();
-    }
-    var containsNumbers = /\d/.test(input);
-    var containsUpperLetters = /[a-z]/.test(input);
-    var containsLowerLetters = /[A-Z]/.test(input);
-    var containsSpecialCharacters = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(input);
-    if (!containsNumbers || !containsUpperLetters || !containsLowerLetters || !containsSpecialCharacters) {
-        return passwordError();
+function enterOne() {
+    var passText = document.getElementById("input-1").value;
+    if (passText.toLowerCase() === "cpu") {
+        foundPassword1 = true;
+        document.getElementById("input1-success").style.display = "block";
+        triggers[0].className = "trigger-disabled";
+        setTimeout(exitPassword, 3000);
     } else {
-        clearErrors();
-        document.getElementById("input-success").style.display = "block";
+        document.getElementById("input1-error").style.display = "block";
         setTimeout(function () {
-            exitPassword();
-            password = input;
-            smallPhone.style.display = "block";
-        }, 3000)
+            document.getElementById("input1-error").style.display = "none";
+        }, 3000);
     }
 }
 
-function clearErrors() {
-    document.getElementById("match-error").style.display = "none";
-    document.getElementById("input-error").style.display = "none";
-}
-
-function passwordError() {
-    clearErrors();
-    document.getElementById("input-error").style.display = "block";
-    setTimeout(function () {
-        document.getElementById("input-error").style.display = "none";
-    }, 3000);
+function enterTwo() {
+    var passText = document.getElementById("input-2").value;
+    if (passText.toLowerCase() === "123456") {
+        foundPassword2 = true;
+        document.getElementById("input2-success").style.display = "block";
+        triggers[1].className = "trigger-disabled";
+        setTimeout(exitPassword, 3000);
+    } else {
+        document.getElementById("input2-error").style.display = "block";
+        setTimeout(function () {
+            document.getElementById("input2-error").style.display = "none";
+        }, 3000);
+    }
 }
 
 function openPhone() {
-    if (phoneOpen || !password) return;
+    if (phoneOpen || !foundPassword1 || !foundPassword2) return;
     stageImage.className = "dark";
     phone.style.display = "block"
     phoneOpen = true;
@@ -83,7 +94,6 @@ function closePhone() {
     phone.style.display = "none";
     phoneOpen = false;
 }
-
 
 function redChoice() {
     if (done) return;

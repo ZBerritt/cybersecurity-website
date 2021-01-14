@@ -341,6 +341,16 @@ img.exit-phone {
 }
 
 /* Deceive only */
+#phone-2 {
+  position: fixed;
+  display: block;
+  bottom: 1%;
+  right: 12%;
+  height: 21%;
+  width: auto;
+  z-index: 100;
+  cursor: pointer;
+}
 
 /* Destroy only */
 

@@ -16,30 +16,55 @@
             <img onclick="window.location.href = '../'" id="home-btn" src="../public/assets/Home.png">
             <img id="hint-btn" onclick="document.getElementById('hint').style.display = 'block';" src="../public/assets/Hint.png">
             <img id="menu-btn" onclick="window.location.href = '../menu.html'" src="../public/assets/Menu.png">
-            <img style="display: none;" id="phone" onclick="openPhone()" src="../public/assets/Phone.png">
-            <div id="password" class="insert-password">
+            <img id="phone-2" onclick="openPhone()" src="../public/assets/Phone.png">
+            <img id="notepad" onclick="openNotepad()" src="../public/assets/Notepad.png">
+            <button id="light-1-trigger" onclick="lightOneTrigger()" class="trigger-enabled" style="width: 10%; height: 12%; top: 26%; left: 81%;"></button>
+            <button id="light-2-trigger" onclick="lightTwoTrigger()" class="trigger-enabled" style="width: 10%; height: 12%; top: 16%; left: 45%;"></button>
+            <div id="notepad-full">
+                <img class="exit-notebook" src="../public/assets/x.png" onclick="closeNotepad()">
+                <img src="../public/assets/Questions.png" height="100%" width="100%">
+            </div>
+            <div id="password-1" class="insert-password">
                 <div class="pass-top-bar">
                     <img src="../public/assets/x.png" style="position: absolute; height: 8%; width: auto; top: .5%; right: .5%; cursor: pointer;" onclick="exitPassword()">
                 </div>
                 <div>
-                    <span style="font-size: 1.5vw;">Create a <b>strong</b> password for the traffic light</span>
-                    <br>
-                    <span style="font-size: 1vw;">This password will not save anywhere after leaving the page!</span>
-                    <br><br>
-                    <table class="password-input" align="center" style="display: table; text-align: left;">
+                    <h1 style="font-size: 1.75vw;">Light #1 Login</h1>
+                    <table class="password-input" align="center" style="display: table; text-align: center;">
                         <tr>
-                            <th><span style="font-size: 1vw;">Password:</span></th>
-                            <th><input style="height: 1vw; width: 10vw;" id="pass-input" type="password"></th>
+                            <th><span style="font-size: 1vw">Username:</span></th>
+                            <th><input style="height: 1vw; width: 10vw;" type="text" value="H@(|<3R" readonly="readonly"></th>
                         </tr>
-                        <tr>
-                            <th><span style="font-size: 1vw;">Re-type Password:</span></th>
-                            <th><input style="height: 1vw; width: 10vw;" id="pass-confirm" type="password"></th>
+                        <tr style="display: table-row;">
+                            <th><span style="font-size: 1vw">Password:</span></th>
+                            <th><input style="height: 1vw; width: 10vw;" id="input-1" type="password"></th>
                         </tr>
                     </table>
-                    <button style="position: absolute; bottom: 1%; right: 1%; height: 20%; width: 25%; font-size: 2vw;" onclick="testPassword()">Enter</button>
-                        <p id="match-error" style="color: red; display: none; font-size: 140%;">Your passwords do not match.</p>
-                        <p id="input-error" style="color: red; display: none; font-size: 140%;">Your password is not strong enough!</p>
-                        <p id="input-success" style="color: green; display: none; font-size: 140%;">Success! Password has been applied.</p>
+                        <button onclick="enterOne()" id="enter-1" style="position: absolute; bottom: 1%; right: 1%; height: 20%; width: 25%; font-size: 2vw;">Enter</button>
+                        <p id="input1-error" style="color: red; display: none; font-size: 140%;">Incorrect Password!</p>
+                        <p id="input1-success" style="color: green; display: none; font-size: 140%;">Success! Exiting...</p>
+                </div>
+            </div>
+
+            <div id="password-2" class="insert-password">
+                <div class="pass-top-bar">
+                    <img src="../public/assets/x.png" style="position: absolute; height: 8%; width: auto; top: .5%; right: .5%; cursor: pointer;" onclick="exitPassword()">
+                </div>
+                <div>
+                    <h1 style="font-size: 1.75vw;">Light #2 Login</h1>
+                    <table class="password-input" align="center" style="display: table; text-align: center;">
+                        <tr>
+                            <th><span style="font-size: 1vw">Username:</span></th>
+                            <th><input style="height: 1vw; width: 10vw;" type="text" value="H@(|<3R" readonly="readonly"></th>
+                        </tr>
+                        <tr style="display: table-row;">
+                            <th><span style="font-size: 1vw">Password:</span></th>
+                            <th><input style="height: 1vw; width: 10vw;" id="input-2" type="password"></th>
+                        </tr>
+                    </table>
+                        <button onclick="enterTwo()" id="enter-1" style="position: absolute; bottom: 1%; right: 1%; height: 20%; width: 25%; font-size: 2vw;">Enter</button>
+                        <p id="input2-error" style="color: red; display: none; font-size: 140%;">Incorrect Password!</p>
+                        <p id="input2-success" style="color: green; display: none; font-size: 140%;">Success! Exiting...</p>
                 </div>
             </div>
             <div id="phone-full">
@@ -83,20 +108,17 @@
             </p>
             <hr>
             <ul class="directions">
-                <li>Set a <b>strong</b> password for the lights</li>
-                <li>Open your phone and change the light color</li>
+                <li>Find the passwords using your notebook</li>
+                <li>Enter the password in the respective traffic light</li>
+                <li>Open your phone and choose a color for the lights</li>
             </ul>
-            <button class="hack-btn" onclick="start()">Start!</button>
-            <br><br>
-            <div style="font-size: 125%; margin-left: 5%;" id="hint">
-                <span>A strong password must be the following:</span>
-                <ol>
-                    <li>At least 10 characters long</li>
-                    <li>Contains upper and lower case letters</li>
-                    <li>Contains number(s)</li>
-                    <li>Contains special characters (!, ?, @, etc.)</li>
-                </ol>
-            </div>
+            <p id="hint">
+                Password hints:
+                <br><br>
+                Password 1: Starts with a C
+                <br>
+                Password 2: All numbers
+            </p>
             <p id="deceive-success" style="display: none; color: green">
                 Success! The lights have been manipulated, tricking the drivers.
             </p>
