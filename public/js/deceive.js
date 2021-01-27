@@ -57,6 +57,10 @@ function enterOne() {
         foundPassword1 = true;
         document.getElementById("input1-success").style.display = "block";
         triggers[0].className = "trigger-disabled";
+        if (foundPassword1 && foundPassword2) {
+            document.getElementById("phone-2").style.display = "block";
+            document.getElementById("notepad").style.display = "none";
+        }
         setTimeout(exitPassword, 3000);
     } else {
         document.getElementById("input1-error").style.display = "block";
@@ -72,6 +76,10 @@ function enterTwo() {
         foundPassword2 = true;
         document.getElementById("input2-success").style.display = "block";
         triggers[1].className = "trigger-disabled";
+        if (foundPassword1 && foundPassword2) {
+            document.getElementById("phone-2").style.display = "block";
+            document.getElementById("notepad").style.display = "none";
+        }
         setTimeout(exitPassword, 3000);
     } else {
         document.getElementById("input2-error").style.display = "block";
@@ -99,6 +107,7 @@ function redChoice() {
     if (done) return;
     stageImage.src = "../public/assets/deceive/Lights red.png";
     document.getElementById("red-message").style.display = "block";
+    document.getElementById("phone-2").style.display = "none";
     done = true;
     colorChoices.style.display = "none";
     deceiveSuccess.style.display = "block";
@@ -108,6 +117,7 @@ function greenChoice() {
     if (done) return;
     stageImage.src = "../public/assets/deceive/Lights green.png";
     document.getElementById("green-message").style.display = "block";
+    document.getElementById("phone-2").style.display = "none";
     done = true;
     colorChoices.style.display = "none";
     deceiveSuccess.style.display = "block";

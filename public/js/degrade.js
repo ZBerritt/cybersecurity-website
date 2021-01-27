@@ -40,6 +40,7 @@ function sendData() {
         if (trafficLightHealth === 0) {
             success.style.display = "block";
             stageImage.src = "../public/assets/Traffic Intersection.png";
+            document.getElementById("phone").style.display = "none";
             degradeSuccess.style.display = "block";
         }
     }
