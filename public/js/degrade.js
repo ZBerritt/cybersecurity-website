@@ -50,7 +50,7 @@ function getLightText() {
         case 3:
             return ["Great", "lime"];
         case 2:
-            return ["Good", "blue"];
+            return ["Good", "#96ABFF"];
         case 1:
             return ["Ok", "yellow"];
         case 0:
