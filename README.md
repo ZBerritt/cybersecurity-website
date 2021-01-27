@@ -11,6 +11,17 @@ Fully operational site: **https://zberritt.github.io/cybersecurity-website**
 ## Hosting
 The files are pure HTML, CSS and JS with no backend components. Files should be compatible with any hosting solution (apache, nginx, github pages, etc). 
 
+### Github Pages
+Since our code is hosted on github, forking the code to host on github pages is very simple. For more info: https://pages.github.com/
+
+1. **Fork this repo** by clicking the "Fork" button on the top right
+
+2. On your forked repo (https://github.com/your-name/cybersecurity-website), **open you repo's settings**
+
+3. Scroll down to "Github Pages" and **change your branch to main and your source to / (root)** and save
+
+4. Your website will be ready at https://your-name.github.io/cybersecurity website
+
 ## Support
 All issues with the software can be reported on the issue tab. For direct communication, please send an email to zberritt@gmail.com.
 
