@@ -48,7 +48,7 @@ function sendData() {
 function getLightText() {
     switch (trafficLightHealth) {
         case 3:
-            return ["Great", "green"];
+            return ["Great", "lime"];
         case 2:
             return ["Good", "blue"];
         case 1:
