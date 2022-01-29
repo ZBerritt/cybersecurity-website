@@ -1,4 +1,6 @@
 # Traffic Light Hacking - The 5 Ds of Hacking
+**This was part of a school project in collaboration with Lockheed Martin.**
+
 An educational cybersecurity website aimed at students from grades 8-12
 
 Fully operational site: **https://zberritt.github.io/cybersecurity-website**
